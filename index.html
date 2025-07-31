@@ -51,11 +51,8 @@
             background-color: #e67300;
             transform: translateY(-3px);
         }
-        /* ========================================================== */
-        /*         >>> NOVOS ESTILOS PARA O BOTÃO TICKETS <<<           */
-        /* ========================================================== */
         .btn-tickets {
-            background-color: #F16521; /* Laranja do Tickets */
+            background-color: #F16521;
             color: white;
             padding: 1rem 2.5rem;
             border-radius: 0.75rem;
@@ -72,10 +69,9 @@
         .text-highlight {
             color: #ff8c00;
         }
-        .text-tickets { /* Cor para o título da nova seção */
+        .text-tickets {
             color: #F16521;
         }
-        /* ========================================================== */
         .section-title {
             font-size: 2.5rem;
             font-weight: 800;
@@ -125,22 +121,32 @@
             </p>
         </section>
 
+        <!-- ========================================================== -->
+        <!--         >>> A SEÇÃO CORRIGIDA ESTÁ AQUI <<<                -->
+        <!-- ========================================================== -->
         <section class="features-section mb-12">
             <h2 class="section-title">O Que Você Encontrará no Sinthonize:</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Seus 3 feature cards originais continuam aqui, sem alteração -->
-                <div class="feature-card"> ... </div>
-                <div class="feature-card"> ... </div>
-                <div class="feature-card"> ... </div>
+                <div class="feature-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07L10 6.07a5 5 0 0 0-1.54 3.46"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07L14 17.93a5 5 0 0 0 1.54-3.46"/></svg>
+                    <h3 class="text-xl font-semibold text-white mb-2">Conexão Direta</h3>
+                    <p class="text-gray-400">Músicos e Fãs em um só lugar, facilitando a interação e o apoio mútuo.</p>
+                </div>
+                <div class="feature-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-music"><path d="M9 18V5l12-2v13a2 2 0 0 1-2 2h-1V12L9 10v8Z"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                    <h3 class="text-xl font-semibold text-white mb-2">Música ao Vivo</h3>
+                    <p class="text-gray-400">Descubra shows, gerencie eventos e encontre seu público em tempo real.</p>
+                </div>
+                <div class="feature-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87ZM16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    <h3 class="text-xl font-semibold text-white mb-2">Comunidade Vibrante</h3>
+                    <p class="text-gray-400">Faça parte de um ecossistema que valoriza e impulsiona a cena musical.</p>
+                </div>
             </div>
         </section>
 
-        <!-- ========================================================== -->
-        <!--         >>> A NOVA SEÇÃO "PONTE" ESTÁ AQUI <<<             -->
-        <!-- ========================================================== -->
         <section class="tickets-intro-section mb-12">
             <div class="border-t-2 border-gray-700 my-8"></div>
-            
             <h2 class="section-title text-tickets">Conheça o Sinthonize Tickets</h2>
             <p class="text-lg leading-relaxed mb-6 text-gray-300">
                 Eleve seus eventos a um novo patamar. O <span class="font-semibold text-tickets">Sinthonize Tickets</span> é a ferramenta completa para produtores, integrada ao nosso ecossistema musical.
