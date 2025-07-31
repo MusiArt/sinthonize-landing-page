@@ -3,120 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecossistema Sinthonize | Conectando a Cena Musical</title>
+    <title>Sinthonize | Conectando Músicos e Fãs</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --music-accent: #ff8c00; /* Laranja do app de Música */
-            --tickets-primary: #232E35; /* Cinza do app de Tickets */
-            --tickets-accent: #F16521; /* Laranja do app de Tickets */
-        }
         body {
             font-family: 'Nunito', sans-serif;
             background-color: #121212;
             color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            overflow-x: hidden;
+        }
+        .header-section {
+            background-color: #1f1f1f;
+            width: 100%;
+            padding: 2rem 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
         }
         .main-content {
             background-color: #1f1f1f;
             border-radius: 1.5rem;
+            padding: 2.5rem;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 2rem;
         }
-        .btn {
+        .btn-primary {
+            background-color: #ff8c00;
+            color: white;
             padding: 1rem 2.5rem;
             border-radius: 0.75rem;
             font-weight: 700;
             font-size: 1.125rem;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
             display: inline-block;
-            text-align: center;
+            box-shadow: 0 4px 10px rgba(255, 140, 0, 0.4);
         }
-        .btn:hover {
+        .btn-primary:hover {
+            background-color: #e67300;
             transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
         }
-        .btn-music {
-            background-color: var(--music-accent);
-            color: white;
-        }
+        /* ========================================================== */
+        /*         >>> NOVOS ESTILOS PARA O BOTÃO TICKETS <<<           */
+        /* ========================================================== */
         .btn-tickets {
-            background-color: var(--tickets-accent);
+            background-color: #F16521; /* Laranja do Tickets */
             color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            font-size: 1.125rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(241, 101, 33, 0.4);
         }
-        .text-music { color: var(--music-accent); }
-        .text-tickets { color: var(--tickets-accent); }
+        .btn-tickets:hover {
+            background-color: #d9581b;
+            transform: translateY(-3px);
+        }
+        .text-highlight {
+            color: #ff8c00;
+        }
+        .text-tickets { /* Cor para o título da nova seção */
+            color: #F16521;
+        }
+        /* ========================================================== */
         .section-title {
             font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 1.5rem;
+            color: #ff8c00;
         }
-        .product-card {
+        .feature-card {
             background-color: #2a2a2a;
             border-radius: 1rem;
-            padding: 2rem;
+            padding: 1.5rem;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: left;
             display: flex;
             flex-direction: column;
-            height: 100%;
+            align-items: center;
+            justify-content: center;
         }
-        .product-card h3 {
-            font-size: 1.8rem;
-            font-weight: 700;
+        .feature-card svg {
+            color: #ff8c00;
             margin-bottom: 1rem;
         }
-        .product-card p {
-            flex-grow: 1; /* Faz o parágrafo ocupar o espaço, alinhando os botões */
+        .footer-section {
+            width: 100%;
+            padding: 1.5rem;
+            text-align: center;
+            color: #a0a0a0;
+            font-size: 0.875rem;
         }
     </style>
 </head>
-<body class="flex flex-col items-center min-h-screen p-4 md:p-8">
-    
-    <header class="text-center mb-12">
-        <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-2">Ecossistema Sinthonize</h1>
-        <p class="text-xl md:text-2xl text-gray-400">As ferramentas definitivas para a cena musical.</p>
+<body>
+    <header class="header-section">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-6xl font-extrabold text-white mb-2">Sinthonize</h1>
+            <p class="text-2xl text-gray-400">A Harmonia Perfeita entre Músicos e Fãs</p>
+        </div>
     </header>
 
-    <main class="main-content w-full max-w-5xl p-6 md:p-10">
-        
-        <section class="mb-16">
-            <h2 class="section-title text-center text-white">Do Palco à Palma da Mão</h2>
-            <p class="text-lg text-center text-gray-300 max-w-3xl mx-auto">
-                O Sinthonize é um ecossistema integrado pensado para fortalecer artistas e produtores de eventos. Conecte-se com seu público através do nosso app de música e gerencie suas vendas de forma profissional com o Sinthonize Tickets.
+    <main class="main-content">
+        <section class="hero-section mb-12">
+            <h2 class="section-title">Bem-vindo(a) ao Futuro da Música ao Vivo!</h2>
+            <p class="text-xl leading-relaxed mb-8 text-gray-300">
+                O <span class="text-highlight font-semibold">Sinthonize</span> é mais do que um aplicativo: é a sua nova comunidade para explorar, conectar e vivenciar a música ao vivo. Nossa plataforma foi cuidadosamente desenvolvida para unir o talento dos artistas independentes à paixão dos fãs, criando experiências inesquecíveis.
+            </p>
+            <p class="text-lg leading-relaxed text-gray-400">
+                Descubra shows perto de você, siga seus músicos favoritos e mergulhe em um universo onde cada nota e cada batida te conectam à cena musical local.
             </p>
         </section>
 
-        <!-- SEÇÃO DOS PRODUTOS -->
-        <section>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                
-                <!-- Card App de Música -->
-                <div class="product-card">
-                    <h3 class="text-music">Sinthonize App</h3>
-                    <p class="text-gray-400 mb-6">
-                        A plataforma para músicos independentes gerenciarem suas carreiras, encontrarem shows, montarem repertórios e se conectarem diretamente com uma comunidade apaixonada de fãs.
-                    </p>
-                    <a href="https://drive.google.com/drive/folders/1lns5gTOL8cNCRDFz-T7ZlRdyjRNKV-nf?usp=drive_link" target="_blank" class="btn btn-music">
-                        Baixar App (Música)
-                    </a>
-                </div>
-
-                <!-- Card App de Tickets -->
-                <div class="product-card">
-                    <h3 class="text-tickets">Sinthonize Tickets</h3>
-                    <p class="text-gray-400 mb-6">
-                        A ferramenta completa para produtores. Crie eventos, gerencie lotes de ingressos com taxas flexíveis, valide entradas com QR Code e tenha acesso a relatórios financeiros detalhados.
-                    </p>
-                    <a href="#" class="btn btn-tickets"> <!-- COLOQUE O LINK DE DOWNLOAD DO APK AQUI -->
-                        Baixar App (Tickets)
-                    </a>
-                </div>
+        <section class="features-section mb-12">
+            <h2 class="section-title">O Que Você Encontrará no Sinthonize:</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Seus 3 feature cards originais continuam aqui, sem alteração -->
+                <div class="feature-card"> ... </div>
+                <div class="feature-card"> ... </div>
+                <div class="feature-card"> ... </div>
             </div>
         </section>
 
+        <!-- ========================================================== -->
+        <!--         >>> A NOVA SEÇÃO "PONTE" ESTÁ AQUI <<<             -->
+        <!-- ========================================================== -->
+        <section class="tickets-intro-section mb-12">
+            <div class="border-t-2 border-gray-700 my-8"></div>
+            
+            <h2 class="section-title text-tickets">Conheça o Sinthonize Tickets</h2>
+            <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                Eleve seus eventos a um novo patamar. O <span class="font-semibold text-tickets">Sinthonize Tickets</span> é a ferramenta completa para produtores, integrada ao nosso ecossistema musical.
+            </p>
+            <a href="tickets.html" class="btn-tickets">
+                Saiba Mais e Venda Ingressos
+            </a>
+        </section>
+        
+        <section class="call-to-action-section mb-12">
+            <h2 class="section-title">Participe da Nossa Fase Beta!</h2>
+            <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                Sua ajuda é fundamental para aprimorarmos o Sinthonize. Baixe a versão de testes do aplicativo e nos ajude a construir a melhor experiência musical.
+            </p>
+            <a href="https://drive.google.com/drive/folders/1lns5gTOL8cNCRDFz-T7ZlRdyjRNKV-nf?usp=drive_link" target="_blank" class="btn-primary">
+                Baixar App e Instruções
+            </a>
+            <p class="text-sm text-gray-500 mt-4">
+                *O link direciona para uma pasta no Google Drive com o APK e a cartilha de instalação.
+            </p>
+        </section>
     </main>
 
-    <footer class="w-full text-center text-gray-500 text-sm p-4 mt-8">
-        <p>© <span id="currentYear"></span> Sinthonize. Todos os direitos reservados. | <a href="politica-de-privacidade.html" class="text-music hover:underline">Política de Privacidade</a></p>
+    <footer class="footer-section">
+        <p>© <span id="currentYear"></span> Sinthonize. Todos os direitos reservados. | <a href="politica-de-privacidade.html" class="text-highlight">Política de Privacidade</a></p>
     </footer>
 
     <script>
