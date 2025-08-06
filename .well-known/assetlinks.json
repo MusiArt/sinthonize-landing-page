@@ -6,4 +6,12 @@
     "sha256_cert_fingerprints":
     ["78:03:C5:2D:9F:D8:C5:68:5E:98:D6:13:98:42:91:92:BB:49:74:A4:8F:D1:1D:CD:9A:49:E2:A1:FA:FB:D9:53"]
   }
+},
+{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "br.com.sinthonize.app",
+    "sha256_cert_fingerprints": ["78:03:C5:2D:9F:D8:C5:68:5E:98:D6:13:98:42:91:92:BB:49:74:A4:8F:D1:1D:CD:9A:49:E2:A1:FA:FB:D9:53"]
+  }
 }]
