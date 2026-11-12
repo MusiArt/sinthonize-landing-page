@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>Sinthonize para Músicos | O seu palco no controle</title>
+    <meta name="description" content="Repertório offline, cockpit ao vivo, extrato com Pix e plaquinha permanente. O Sinthonize no controle do seu palco.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#0B0B10',
+                        surface: '#16161F',
+                        card: '#1C1C28',
+                        brand: '#F4511E',
+                        gold: '#E8B86D'
+                    },
+                    fontFamily: {
+                        sans: ['Sora', 'system-ui', 'sans-serif'],
+                        display: ['Syne', 'Sora', 'sans-serif']
+                    },
+                    boxShadow: {
+                        glow: '0 18px 50px rgba(244, 81, 30, 0.28)',
+                        card: '0 20px 40px rgba(0, 0, 0, 0.35)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body class="ambient min-h-screen overflow-x-hidden">
+    <header class="sticky top-0 z-40 border-b border-white/5 bg-[#0B0B10]/80 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+            <a href="index.html" class="brand-wordmark text-xl text-white">Sinthonize</a>
+            <nav class="flex items-center gap-3 text-sm sm:gap-4">
+                <a href="index.html" class="btn-ghost inline-flex min-h-10 items-center rounded-full px-4 py-2 font-semibold">← Home</a>
+                <a href="https://apps.apple.com/br/app/sinthonize/id6830309123" target="_blank" rel="noopener noreferrer" class="hidden rounded-full border border-white/20 bg-black px-4 py-2 font-semibold text-white sm:inline">App Store</a>
+                <a href="https://play.google.com/store/apps/details?id=br.com.sinthonize.app" target="_blank" rel="noopener noreferrer" class="rounded-full bg-brand px-4 py-2 font-semibold text-black shadow-glow">Google Play</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="mx-auto max-w-6xl px-5 pb-10 pt-12 sm:pt-16">
+            <a href="index.html" class="inline-flex text-sm font-semibold text-zinc-400 transition hover:text-white">← Voltar para a Home</a>
+            <p class="mt-6 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
+                Para músicos
+            </p>
+            <h1 class="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl">
+                Sinthonize para Músicos:
+                <span class="bg-gradient-to-r from-brand to-gold bg-clip-text text-transparent">O seu palco no controle.</span>
+            </h1>
+            <p class="mt-5 max-w-2xl text-base leading-relaxed text-zinc-300 sm:text-lg">
+                Do ensaio ao extrato: repertório offline, fila ao vivo, Pix no Mercado Pago e a plaquinha que vira cardápio web no show.
+            </p>
+            <div class="mt-8 flex flex-wrap items-center gap-3">
+                <a href="https://apps.apple.com/br/app/sinthonize/id6830309123" target="_blank" rel="noopener noreferrer" class="inline-flex" aria-label="Download on the App Store">
+                    <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" style="height: 40px; width: auto;" />
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=br.com.sinthonize.app" target="_blank" rel="noopener noreferrer" class="inline-flex" aria-label="Disponível no Google Play">
+                    <img alt="Disponível no Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" style="height: 60px; width: auto;" />
+                </a>
+            </div>
+        </section>
+
+        <section class="mx-auto max-w-6xl space-y-5 px-5 pb-16">
+            <article id="repertorio" class="grid gap-6 rounded-[1.75rem] border border-white/10 bg-card p-6 shadow-card sm:p-8 lg:grid-cols-[1.15fr_0.85fr]">
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">Aba · Repertório</p>
+                    <h2 class="mt-3 font-display text-2xl font-extrabold text-white sm:text-3xl">Repertório Inteligente</h2>
+                    <p class="mt-3 leading-relaxed text-zinc-300">
+                        Cadastro rápido, cifras 100% offline e editor direto na tela de leitura com suporte a C7M e transpositor.
+                    </p>
+                    <ul class="mt-5 space-y-2 text-sm text-zinc-300">
+                        <li class="flex gap-2"><span class="text-brand">•</span><span>Monte o setlist uma vez e leve para o palco sem depender de Wi‑Fi.</span></li>
+                        <li class="flex gap-2"><span class="text-brand">•</span><span>Ajuste o tom no momento da leitura, sem sair da cifra.</span></li>
+                        <li class="flex gap-2"><span class="text-brand">•</span><span>Acordes complexos (como C7M) entram no mesmo fluxo de edição.</span></li>
+                    </ul>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-[#12121a] p-5" aria-hidden="true">
+                    <div class="mb-3 flex items-center justify-between">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-zinc-500">Leitura de cifra</span>
+                        <span class="rounded-full bg-brand/15 px-2.5 py-1 text-[0.65rem] font-bold text-orange-300">Offline</span>
+                    </div>
+                    <div class="rounded-xl border border-white/8 bg-white/[0.03] p-4">
+                        <div class="font-semibold text-white">Garota de Ipanema</div>
+                        <div class="mt-1 text-xs text-zinc-500">Tom −1 · C7M → B7M</div>
+                        <div class="mt-4 space-y-2 font-mono text-sm text-orange-200/90">
+                            <div>F#m7 B7 Emaj7</div>
+                            <div class="text-zinc-400">Olha que coisa mais linda…</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="palco" class="grid gap-6 rounded-[1.75rem] border border-brand/25 bg-brand/5 p-6 shadow-card sm:p-8 lg:grid-cols-[1.15fr_0.85fr]">
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">Aba · Ao vivo</p>
+                    <h2 class="mt-3 font-display text-2xl font-extrabold text-white sm:text-3xl">Cockpit Ao Vivo (O Palco)</h2>
+                    <p class="mt-3 leading-relaxed text-zinc-300">
+                        87% da tela focada na fila de pedidos, cronômetro de show e intervalo embutido, e reordenação de setlist arrastando o dedo.
+                    </p>
+                    <ul class="mt-5 space-y-2 text-sm text-zinc-300">
+                        <li class="flex gap-2"><span class="text-brand">•</span><span>A fila VIP ocupa o centro da atenção — o que importa na hora do show.</span></li>
+                        <li class="flex gap-2"><span class="text-brand">•</span><span>Cronômetro e intervalo na mesma tela, sem abrir outro app.</span></li>
+                        <li class="flex gap-2"><span class="text-brand">•</span><span>Reordene o setlist com o dedo, no ritmo da noite.</span></li>
+                    </ul>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-[#12121a] p-5" aria-hidden="true">
+                    <div class="mb-3 flex items-center justify-between text-xs">
+                        <span class="font-semibold uppercase tracking-wider text-zinc-500">Fila ao vivo</span>
+                        <span class="font-bold text-brand">01:24:08</span>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="rounded-xl border border-brand/40 bg-brand/15 p-3">
+                            <div class="text-[0.65rem] uppercase text-orange-200/80">Agora</div>
+                            <div class="mt-1 font-semibold text-white">Eu Te Devoro · R$ 50</div>
+                        </div>
+                        <div class="rounded-xl border border-white/8 p-3 text-sm text-zinc-300">2 · Wave · R$ 30</div>
+                        <div class="rounded-xl border border-white/8 p-3 text-sm text-zinc-300">3 · Sutilmente · R$ 25</div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="carteira" class="grid gap-6 rounded-[1.75rem] border border-white/10 bg-card p-6 shadow-card sm:p-8 lg:grid-cols-[1.15fr_0.85fr]">
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">Aba · Carteira</p>
+                    <h2 class="mt-3 font-display text-2xl font-extrabold text-white sm:text-3xl">Extrato e Carteira</h2>
+                    <p class="mt-3 leading-relaxed text-zinc-300">
+                        Acompanhamento de 100% das gorjetas e couverts pagos, com split automático de comissão via Mercado Pago.
+                    </p>
+                    <ul class="mt-5 space-y-2 text-sm text-zinc-300">
+                        <li class="flex gap-2"><span class="text-brand">•</span><span>Veja o líquido da noite enquanto o show acontece.</span></li>
+                        <li class="flex gap-2"><span class="text-brand">•</span><span>Split de comissão automático — sem planilha no fim.</span></li>
+                        <li class="flex gap-2"><span class="text-brand">•</span><span>Pix cai na conta Mercado Pago conectada ao artista.</span></li>
+                    </ul>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-[#12121a] p-5" aria-hidden="true">
+                    <div class="text-xs font-semibold uppercase tracking-wider text-zinc-500">Extrato da noite</div>
+                    <div class="mt-3 font-display text-3xl font-extrabold text-white">R$ 486,00</div>
+                    <div class="mt-1 text-sm text-zinc-400">Gorjetas + couvert · split MP</div>
+                    <div class="mt-5 grid grid-cols-2 gap-2 text-center text-sm">
+                        <div class="rounded-xl border border-white/8 p-3">
+                            <div class="text-xs text-zinc-500">Pedidos</div>
+                            <div class="mt-1 font-bold text-white">18</div>
+                        </div>
+                        <div class="rounded-xl border border-white/8 p-3">
+                            <div class="text-xs text-zinc-500">Líquido</div>
+                            <div class="mt-1 font-bold text-brand">89%</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="plaquinha" class="grid gap-6 rounded-[1.75rem] border border-white/10 bg-card p-6 shadow-card sm:p-8 lg:grid-cols-[1.15fr_0.85fr]">
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">Ferramenta · Web</p>
+                    <h2 class="mt-3 font-display text-2xl font-extrabold text-white sm:text-3xl">A Plaquinha Permanente</h2>
+                    <p class="mt-3 leading-relaxed text-zinc-300">
+                        O QR Code único que você imprime uma vez e serve como cardápio web automático no show.
+                    </p>
+                    <ul class="mt-5 space-y-2 text-sm text-zinc-300">
+                        <li class="flex gap-2"><span class="text-brand">•</span><span>Um QR por artista — imprima e use em qualquer casa.</span></li>
+                        <li class="flex gap-2"><span class="text-brand">•</span><span>No show, a plaquinha abre o cardápio web do repertório da noite.</span></li>
+                        <li class="flex gap-2"><span class="text-brand">•</span><span>O fã pede e paga sem baixar o app. <a href="fa.html" class="font-semibold text-brand hover:text-orange-300">Ver fluxo do fã →</a></span></li>
+                    </ul>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-[#12121a] p-5" aria-hidden="true">
+                    <div class="mx-auto max-w-[200px] rounded-2xl border border-dashed border-brand/40 bg-brand/5 p-6 text-center">
+                        <div class="mx-auto mb-3 grid h-24 w-24 place-items-center rounded-xl border border-brand/35 bg-[#0B0B10] font-mono text-[0.55rem] leading-tight text-brand">
+                            QR<br>ÚNICO
+                        </div>
+                        <div class="text-sm font-semibold text-white">Plaquinha</div>
+                        <div class="mt-1 text-xs text-zinc-400">Imprima uma vez</div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="mx-auto max-w-6xl px-5 pb-20">
+            <div class="rounded-[2rem] border border-white/10 bg-gradient-to-br from-brand/20 via-[#12121a] to-[#0B0B10] px-6 py-12 text-center sm:px-10">
+                <h2 class="font-display text-3xl font-extrabold text-white">Baixe e suba no palco</h2>
+                <p class="mx-auto mt-3 max-w-xl text-zinc-300">Repertório, cockpit e Pix — prontos para a próxima noite.</p>
+                <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+                    <a href="https://apps.apple.com/br/app/sinthonize/id6830309123" target="_blank" rel="noopener noreferrer" class="inline-flex" aria-label="Download on the App Store">
+                        <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" style="height: 40px; width: auto;" />
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=br.com.sinthonize.app" target="_blank" rel="noopener noreferrer" class="inline-flex" aria-label="Disponível no Google Play">
+                        <img alt="Disponível no Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" style="height: 60px; width: auto;" />
+                    </a>
+                    <a href="index.html" class="btn-ghost inline-flex min-h-11 items-center rounded-2xl px-5 py-3 text-sm font-extrabold">← Voltar para a Home</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/5 px-5 py-10">
+        <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 text-center text-sm text-zinc-500">
+            <a href="index.html" class="brand-wordmark text-lg text-white">Sinthonize</a>
+            <p>
+                © <span id="currentYear"></span> Sinthonize.
+                <span class="mx-2 text-zinc-700">|</span>
+                <a href="https://app.sinthonize.com.br/privacidade" class="text-brand hover:text-orange-300">Privacidade</a>
+                <span class="mx-2 text-zinc-700">|</span>
+                <a href="https://app.sinthonize.com.br/termos-de-uso" class="text-brand hover:text-orange-300">Termos</a>
+            </p>
+        </div>
+    </footer>
+    <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+</body>
+</html>

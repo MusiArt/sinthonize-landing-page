@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>Sinthonize para Fãs | Peça música sem baixar nada</title>
+    <meta name="description" content="Escaneie a plaquinha, escolha a música, pague com Pix e apoie o artista — tudo no navegador, sem baixar app.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#0B0B10',
+                        surface: '#16161F',
+                        card: '#1C1C28',
+                        brand: '#F4511E',
+                        gold: '#E8B86D'
+                    },
+                    fontFamily: {
+                        sans: ['Sora', 'system-ui', 'sans-serif'],
+                        display: ['Syne', 'Sora', 'sans-serif']
+                    },
+                    boxShadow: {
+                        glow: '0 18px 50px rgba(244, 81, 30, 0.28)',
+                        card: '0 20px 40px rgba(0, 0, 0, 0.35)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body class="ambient min-h-screen overflow-x-hidden">
+    <header class="sticky top-0 z-40 border-b border-white/5 bg-[#0B0B10]/80 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+            <a href="index.html" class="brand-wordmark text-xl text-white">Sinthonize</a>
+            <nav class="flex items-center gap-3 text-sm">
+                <a href="index.html" class="btn-ghost inline-flex min-h-10 items-center rounded-full px-4 py-2 font-semibold">← Home</a>
+                <a href="musico.html" class="hidden text-zinc-300 transition hover:text-white sm:inline">Para músicos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="mx-auto max-w-6xl px-5 pb-10 pt-12 sm:pt-16">
+            <a href="index.html" class="inline-flex text-sm font-semibold text-zinc-400 transition hover:text-white">← Voltar para a Home</a>
+            <p class="mt-6 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
+                Totem Web · Cardápio Digital
+            </p>
+            <h1 class="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl">
+                A Experiência do Fã:
+                <span class="bg-gradient-to-r from-brand to-gold bg-clip-text text-transparent">Peça música sem baixar nada.</span>
+            </h1>
+            <p class="mt-5 max-w-2xl text-base leading-relaxed text-zinc-300 sm:text-lg">
+                Aponte a câmera para a plaquinha na mesa, escolha a música no navegador e pague com Pix. O palco responde na hora.
+            </p>
+        </section>
+
+        <section class="mx-auto max-w-6xl px-5 pb-16">
+            <div class="mb-6 max-w-2xl">
+                <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">Fluxo do Totem Web</p>
+                <h2 class="mt-3 font-display text-3xl font-extrabold text-white">Do QR ao palco, em quatro passos</h2>
+            </div>
+
+            <ol class="space-y-4">
+                <li class="grid gap-5 rounded-[1.75rem] border border-white/10 bg-card p-6 shadow-card sm:grid-cols-[auto_1fr] sm:p-8">
+                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand/15 font-display text-xl font-extrabold text-brand">1</div>
+                    <div>
+                        <h3 class="font-display text-xl font-extrabold text-white sm:text-2xl">Escanear e Escolher</h3>
+                        <p class="mt-2 leading-relaxed text-zinc-300">
+                            Aponte a câmera para a plaquinha na mesa e abra a lista de músicas do artista no navegador do celular (Safari/Chrome).
+                        </p>
+                    </div>
+                </li>
+
+                <li class="grid gap-5 rounded-[1.75rem] border border-white/10 bg-card p-6 shadow-card sm:grid-cols-[auto_1fr] sm:p-8">
+                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand/15 font-display text-xl font-extrabold text-brand">2</div>
+                    <div>
+                        <h3 class="font-display text-xl font-extrabold text-white sm:text-2xl">Pagar com Pix</h3>
+                        <p class="mt-2 leading-relaxed text-zinc-300">
+                            Escolha a música, digite seu nome e gere o código Pix Copia-e-Cola na hora.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="grid gap-5 rounded-[1.75rem] border border-brand/25 bg-brand/5 p-6 shadow-card sm:grid-cols-[auto_1fr] sm:p-8">
+                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand/20 font-display text-xl font-extrabold text-brand">3</div>
+                    <div>
+                        <h3 class="font-display text-xl font-extrabold text-white sm:text-2xl">Confirmação Instantânea</h3>
+                        <p class="mt-2 leading-relaxed text-zinc-300">
+                            Assim que o banco aprovar, a tela do fã avisa e a música aparece no tablet do músico no palco.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="grid gap-5 rounded-[1.75rem] border border-white/10 bg-card p-6 shadow-card sm:grid-cols-[auto_1fr] sm:p-8">
+                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand/15 font-display text-xl font-extrabold text-brand">4</div>
+                    <div>
+                        <h3 class="font-display text-xl font-extrabold text-white sm:text-2xl">Caixinha do Artista</h3>
+                        <p class="mt-2 leading-relaxed text-zinc-300">
+                            Opção de mandar gorjeta espontânea para apoiar o músico — sem pedido de música, só o apoio.
+                        </p>
+                    </div>
+                </li>
+            </ol>
+
+            <aside class="mt-8 overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#12121a] p-6 sm:p-8" aria-hidden="true">
+                <div class="grid items-center gap-6 md:grid-cols-3">
+                    <div class="rounded-2xl border border-dashed border-brand/40 bg-brand/5 p-5 text-center">
+                        <div class="mx-auto mb-3 grid h-16 w-16 place-items-center rounded-xl border border-brand/35 text-xs font-bold text-brand">QR</div>
+                        <div class="text-sm font-semibold text-white">Escaneia</div>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 p-5 text-center">
+                        <div class="text-xs uppercase tracking-wider text-zinc-500">Pix</div>
+                        <div class="mt-2 font-display text-2xl font-extrabold text-white">Copia-e-Cola</div>
+                        <div class="mt-1 text-sm text-zinc-400">Nome + música</div>
+                    </div>
+                    <div class="rounded-2xl border border-brand/30 bg-brand/10 p-5 text-center">
+                        <div class="text-xs uppercase tracking-wider text-orange-200/80">No palco</div>
+                        <div class="mt-2 font-semibold text-white">Pedido na fila</div>
+                        <div class="mt-1 text-sm text-zinc-300">Confirmado ✓</div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="mx-auto max-w-6xl px-5 pb-20">
+            <div class="rounded-[2rem] border border-white/10 bg-gradient-to-br from-brand/20 via-[#12121a] to-[#0B0B10] px-6 py-12 text-center sm:px-10">
+                <h2 class="font-display text-3xl font-extrabold text-white">Sem app. Sem fila de papel.</h2>
+                <p class="mx-auto mt-3 max-w-xl text-zinc-300">
+                    Na próxima noite, o pedido sai da mesa e chega no tablet do músico — com Pix confirmado.
+                </p>
+                <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+                    <a href="index.html" class="btn-primary inline-flex min-h-11 items-center rounded-2xl px-5 py-3 text-sm font-extrabold">← Voltar para a Home</a>
+                    <a href="musico.html" class="btn-ghost inline-flex min-h-11 items-center rounded-2xl px-5 py-3 text-sm font-extrabold">Ver ferramentas do músico</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/5 px-5 py-10">
+        <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 text-center text-sm text-zinc-500">
+            <a href="index.html" class="brand-wordmark text-lg text-white">Sinthonize</a>
+            <p>
+                © <span id="currentYear"></span> Sinthonize.
+                <span class="mx-2 text-zinc-700">|</span>
+                <a href="https://app.sinthonize.com.br/privacidade" class="text-brand hover:text-orange-300">Privacidade</a>
+                <span class="mx-2 text-zinc-700">|</span>
+                <a href="https://app.sinthonize.com.br/termos-de-uso" class="text-brand hover:text-orange-300">Termos</a>
+            </p>
+        </div>
+    </footer>
+    <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+</body>
+</html>
