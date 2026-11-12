@@ -6,25 +6,26 @@
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <title>Sinthonize | Viva a música ao vivo em tempo real</title>
-    <meta name="description" content="Encontre shows por perto, siga músicos favoritos, peça músicas no palco e apoie com Pix. Disponível na App Store e na Google Play.">
+    <title>Sinthonize | O Sistema Operacional da Música ao Vivo</title>
+    <meta name="description" content="Organize seu repertório, gerencie o palco e receba pagamentos na hora. Infraestrutura global para artistas, bares e plateia — no Brasil e nos EUA.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        ink: '#121212',
-                        surface: '#181818',
-                        card: '#1c1c1c',
-                        brand: '#f97316',
-                        gold: '#e8b86d'
+                        ink: '#0B0B10',
+                        surface: '#16161F',
+                        card: '#1C1C28',
+                        brand: '#F4511E',
+                        gold: '#E8B86D'
                     },
                     fontFamily: {
-                        sans: ['Nunito', 'system-ui', 'sans-serif']
+                        sans: ['Sora', 'system-ui', 'sans-serif'],
+                        display: ['Syne', 'Sora', 'sans-serif']
                     },
                     boxShadow: {
-                        glow: '0 18px 50px rgba(249, 115, 22, 0.22)',
+                        glow: '0 18px 50px rgba(244, 81, 30, 0.28)',
                         card: '0 20px 40px rgba(0, 0, 0, 0.35)'
                     }
                 }
@@ -33,82 +34,18 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Nunito', sans-serif;
-            background-color: #121212;
-            color: #e8e8e8;
-            -webkit-font-smoothing: antialiased;
-            text-rendering: optimizeLegibility;
-        }
-        .ambient {
-            background:
-                radial-gradient(900px 420px at 12% -10%, rgba(249, 115, 22, 0.18), transparent 55%),
-                radial-gradient(700px 360px at 92% 8%, rgba(232, 184, 109, 0.12), transparent 50%),
-                radial-gradient(600px 320px at 50% 100%, rgba(249, 115, 22, 0.08), transparent 60%),
-                #121212;
-        }
-        .glass {
-            background: linear-gradient(180deg, rgba(34, 34, 34, 0.92), rgba(22, 22, 22, 0.92));
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
-        }
-        .gold-border {
-            border: 1px solid rgba(232, 184, 109, 0.28);
-            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(249, 115, 22, 0.08);
-        }
-        .btn-primary {
-            background: linear-gradient(180deg, #fb923c 0%, #f97316 100%);
-            color: #111;
-            box-shadow: 0 12px 30px rgba(249, 115, 22, 0.32);
-        }
-        .btn-primary:hover { transform: translateY(-2px); filter: brightness(1.05); }
-        .icon-wrap {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 3rem;
-            height: 3rem;
-            border-radius: 1rem;
-            background: rgba(249, 115, 22, 0.12);
-            color: #f97316;
-        }
-        .feature-tabs[hidden] { display: none !important; }
-        .panel-view { display: none; }
-        .panel-view.active { display: block; }
-        .video-frame {
-            position: relative;
-            height: 0;
-            padding-bottom: 56.25%;
-            overflow: hidden;
-            border-radius: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            background: #000;
-        }
-        .video-frame iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="landing.css">
 </head>
 <body class="ambient min-h-screen overflow-x-hidden">
-    <header class="sticky top-0 z-40 border-b border-white/5 bg-[#121212]/80 backdrop-blur-xl">
+    <header class="sticky top-0 z-40 border-b border-white/5 bg-[#0B0B10]/80 backdrop-blur-xl">
         <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-            <a href="#topo" class="text-xl font-extrabold tracking-tight text-white">Sinthonize</a>
+            <a href="#topo" class="brand-wordmark text-xl text-white">Sinthonize</a>
             <nav class="flex items-center gap-3 text-sm sm:gap-5">
-                <a href="#painel" class="hidden text-zinc-300 transition hover:text-white md:inline">Recursos</a>
-                <a href="#como-funciona" class="hidden text-zinc-300 transition hover:text-white md:inline">Vídeo</a>
-                <a href="#vip" class="hidden text-zinc-300 transition hover:text-white lg:inline">Pix e VIP</a>
-                <a href="#shows" class="hidden text-zinc-300 transition hover:text-white lg:inline">Shows</a>
-                <a href="#musicos" class="hidden text-zinc-300 transition hover:text-white lg:inline">Músicos</a>
-                <a href="tickets.html" class="text-zinc-300 transition hover:text-white">Tickets</a>
-                <a href="politica-de-privacidade.html" class="hidden text-zinc-300 transition hover:text-white sm:inline">Privacidade</a>
+                <a href="#pilares" class="hidden text-zinc-300 transition hover:text-white md:inline">Soluções</a>
+                <a href="#global" class="hidden text-zinc-300 transition hover:text-white md:inline">Global</a>
+                <a href="#como-funciona" class="hidden text-zinc-300 transition hover:text-white lg:inline">Produto</a>
+                <a href="https://app.sinthonize.com.br/para-bares" class="hidden text-zinc-300 transition hover:text-white sm:inline">Para Bares</a>
                 <a href="https://apps.apple.com/br/app/sinthonize/id6830309123" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/20 bg-black px-4 py-2 font-semibold text-white">App Store</a>
                 <a href="https://play.google.com/store/apps/details?id=br.com.sinthonize.app" target="_blank" rel="noopener noreferrer" class="rounded-full bg-brand px-4 py-2 font-semibold text-black shadow-glow">Google Play</a>
             </nav>
@@ -116,276 +53,305 @@
     </header>
 
     <main id="topo">
-        <section class="mx-auto max-w-6xl px-5 pb-16 pt-14 sm:pt-20 lg:pt-24">
-            <div class="mx-auto max-w-3xl text-center">
-                <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-brand/25 bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
-                    Música ao vivo · Tempo real
-                </p>
-                <h1 class="text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
-                    Viva a música ao vivo.
-                    <span class="bg-gradient-to-r from-brand to-gold bg-clip-text text-transparent">Em tempo real.</span>
-                </h1>
-                <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-zinc-300 sm:text-lg">
-                    Encontre shows por perto, siga seus músicos favoritos e peça músicas no palco. O Sinthonize coloca você dentro do show — no instante em que cada nota acontece.
-                </p>
-                <div class="mx-auto mt-8 flex flex-wrap items-center justify-center gap-3">
-                    <a href="https://apps.apple.com/br/app/sinthonize/id6830309123" target="_blank" rel="noopener noreferrer" class="inline-flex" aria-label="Download on the App Store">
-                        <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" style="height: 40px; width: auto;" />
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=br.com.sinthonize.app" target="_blank" rel="noopener noreferrer" class="google-play-btn inline-flex">
-                        <img alt="Disponível no Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" style="height: 60px; width: auto;" />
-                    </a>
+        <!-- HERO -->
+        <section class="mx-auto max-w-6xl px-5 pb-16 pt-12 sm:pt-16 lg:pt-20">
+            <div class="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
+                <div class="reveal">
+                    <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
+                        Infraestrutura Global · SaaS B2B2C
+                    </p>
+                    <h1 class="font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
+                        O Sistema Operacional
+                        <span class="bg-gradient-to-r from-brand to-gold bg-clip-text text-transparent">da Música ao Vivo.</span>
+                    </h1>
+                    <p class="mt-6 max-w-xl text-base leading-relaxed text-zinc-300 sm:text-lg">
+                        Organize seu repertório, gerencie o palco e receba pagamentos na hora. Feito para Artistas e Estabelecimentos.
+                    </p>
+                    <div class="mt-8 flex flex-wrap items-center gap-3">
+                        <a href="https://apps.apple.com/br/app/sinthonize/id6830309123" target="_blank" rel="noopener noreferrer" class="inline-flex" aria-label="Download on the App Store">
+                            <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" style="height: 40px; width: auto;" />
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=br.com.sinthonize.app" target="_blank" rel="noopener noreferrer" class="inline-flex" aria-label="Disponível no Google Play">
+                            <img alt="Disponível no Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" style="height: 60px; width: auto;" />
+                        </a>
+                        <a href="https://app.sinthonize.com.br/para-bares" class="btn-primary inline-flex min-h-11 items-center rounded-2xl px-5 py-3 text-sm font-extrabold">
+                            Para Bares e Casas Noturnas
+                        </a>
+                    </div>
+                    <p class="mt-5 text-sm text-zinc-500">
+                        The Operating System for Live Music — Brasil e Estados Unidos.
+                    </p>
+                </div>
+
+                <div class="product-stage reveal reveal-delay-2" aria-hidden="true">
+                    <div class="dash-shell">
+                        <div class="dash-chrome">
+                            <span class="dash-dot"></span>
+                            <span class="dash-dot"></span>
+                            <span class="dash-dot"></span>
+                            <span class="ml-2 text-[0.65rem] font-semibold tracking-wide text-zinc-500">Painel do Estabelecimento</span>
+                        </div>
+                        <div class="dash-body">
+                            <aside class="dash-side">
+                                <div class="dash-nav-item active"></div>
+                                <div class="dash-nav-item" style="width:68%"></div>
+                                <div class="dash-nav-item" style="width:84%"></div>
+                                <div class="dash-nav-item" style="width:56%"></div>
+                            </aside>
+                            <div class="dash-main">
+                                <div class="dash-kpis">
+                                    <div class="dash-kpi">
+                                        <div class="label">Noites</div>
+                                        <div class="value">48</div>
+                                    </div>
+                                    <div class="dash-kpi">
+                                        <div class="label">Pedidos</div>
+                                        <div class="value">1.2k</div>
+                                    </div>
+                                    <div class="dash-kpi">
+                                        <div class="label">Mapa</div>
+                                        <div class="value">★</div>
+                                    </div>
+                                </div>
+                                <div class="dash-chart">
+                                    <svg viewBox="0 0 320 78" preserveAspectRatio="none">
+                                        <path d="M0 58 C40 52, 70 40, 100 42 C140 45, 160 22, 200 28 C240 34, 270 16, 320 20" fill="none" stroke="#F4511E" stroke-width="3"/>
+                                        <path d="M0 58 C40 52, 70 40, 100 42 C140 45, 160 22, 200 28 C240 34, 270 16, 320 20 L320 78 L0 78 Z" fill="rgba(244,81,30,0.16)"/>
+                                    </svg>
+                                </div>
+                                <div class="dash-rows">
+                                    <div class="dash-row"></div>
+                                    <div class="dash-row"></div>
+                                    <div class="dash-row"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-shell">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <span class="phone-chip">Ao vivo</span>
+                            <p class="phone-title">Cockpit de palco</p>
+                            <div class="phone-line" style="width:88%"></div>
+                            <div class="phone-line" style="width:64%"></div>
+                            <div class="phone-card">
+                                <div class="text-[0.58rem] uppercase tracking-wider text-orange-200/80">Pedido VIP</div>
+                                <div class="amount">R$ 40</div>
+                                <div class="mt-1 text-[0.62rem] text-zinc-300">Confirmado · na fila</div>
+                            </div>
+                            <div class="phone-cta">Abrir setlist offline</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="painel" class="mx-auto max-w-6xl scroll-mt-24 px-5 pb-16">
-            <div class="mb-8 max-w-2xl">
-                <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">Painel interativo</p>
-                <h2 class="mt-3 text-3xl font-extrabold text-white sm:text-4xl">Para quem é cada recurso</h2>
-                <p class="mt-3 text-base leading-relaxed text-zinc-300">Troque entre músico e fã. Cada aba abre o que o app faz hoje.</p>
+        <!-- 3 PILARES -->
+        <section id="pilares" class="mx-auto max-w-6xl scroll-mt-24 px-5 pb-16">
+            <div class="mb-8 max-w-2xl reveal">
+                <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">Arquitetura multi-persona</p>
+                <h2 class="mt-3 font-display text-3xl font-extrabold text-white sm:text-4xl">Três pilares. Uma infraestrutura.</h2>
+                <p class="mt-3 text-base leading-relaxed text-zinc-300">Artista, estabelecimento e plateia no mesmo sistema — do repertório offline ao pagamento na hora.</p>
             </div>
-            <div class="grid grid-cols-2 gap-3" role="tablist" aria-label="Público">
-                <button class="audience-btn min-h-11 rounded-full border border-brand bg-brand/20 px-4 py-3 text-sm font-extrabold text-white" type="button" role="tab" aria-selected="true" data-audience="musico">Para Músicos</button>
-                <button class="audience-btn min-h-11 rounded-full border border-white/10 bg-card px-4 py-3 text-sm font-extrabold text-zinc-300" type="button" role="tab" aria-selected="false" data-audience="fa">Para Fãs</button>
+
+            <div class="grid gap-3 sm:grid-cols-3" role="tablist" aria-label="Públicos Sinthonize">
+                <button class="pillar-btn min-h-12 rounded-2xl border px-4 py-3 text-sm font-extrabold transition" type="button" role="tab" aria-selected="true" data-pillar="artista">Para o Artista</button>
+                <button class="pillar-btn min-h-12 rounded-2xl border px-4 py-3 text-sm font-extrabold transition" type="button" role="tab" aria-selected="false" data-pillar="bar">Para o Bar / Casa Noturna</button>
+                <button class="pillar-btn min-h-12 rounded-2xl border px-4 py-3 text-sm font-extrabold transition" type="button" role="tab" aria-selected="false" data-pillar="plateia">Para a Plateia</button>
             </div>
-            <div class="feature-tabs mt-3 flex flex-wrap gap-2" id="subtabs-musico" role="tablist" aria-label="Recursos do músico">
-                <button class="feature-tab min-h-11 flex-1 rounded-full border border-brand bg-brand/20 px-4 py-3 text-sm font-extrabold text-white" type="button" data-panel="repertorio" aria-selected="true">Repertório</button>
-                <button class="feature-tab min-h-11 flex-1 rounded-full border border-white/10 bg-card px-4 py-3 text-sm font-extrabold text-zinc-300" type="button" data-panel="aovivo" aria-selected="false">Painel ao Vivo</button>
-                <button class="feature-tab min-h-11 flex-1 rounded-full border border-white/10 bg-card px-4 py-3 text-sm font-extrabold text-zinc-300" type="button" data-panel="carteira" aria-selected="false">Conexão Carteira</button>
-            </div>
-            <div class="feature-tabs mt-3 flex flex-wrap gap-2" id="subtabs-fa" role="tablist" aria-label="Recursos do fã" hidden>
-                <button class="feature-tab min-h-11 flex-1 rounded-full border border-white/10 bg-card px-4 py-3 text-sm font-extrabold text-zinc-300" type="button" data-panel="mapa" aria-selected="false">Mapa de Shows</button>
-                <button class="feature-tab min-h-11 flex-1 rounded-full border border-white/10 bg-card px-4 py-3 text-sm font-extrabold text-zinc-300" type="button" data-panel="vip" aria-selected="false">Pedido VIP</button>
-                <button class="feature-tab min-h-11 flex-1 rounded-full border border-white/10 bg-card px-4 py-3 text-sm font-extrabold text-zinc-300" type="button" data-panel="votacao" aria-selected="false">Votação de Músicas</button>
-            </div>
-            <div class="mt-4 rounded-[2rem] border border-white/10 bg-card p-6 shadow-card sm:p-8">
-                <article class="panel-view active" id="panel-repertorio">
-                    <h3 class="text-2xl font-extrabold text-white">Repertório</h3>
-                    <p class="mt-3 leading-relaxed text-zinc-300">A base da noite: o que entra no setlist, na votação, no VIP e no Tótem.</p>
-                    <ul class="mt-4 list-disc space-y-2 pl-5 text-zinc-300">
-                        <li>Importação em massa de músicas por texto, além do cadastro manual.</li>
-                        <li>Cifras e letras no mesmo repertório, prontas para o palco.</li>
-                        <li>Troca de tom ao vivo, sem sair do show.</li>
-                    </ul>
+
+            <div class="mt-4 overflow-hidden rounded-[1.75rem] border border-white/10 bg-card shadow-card">
+                <article class="pillar-panel active gap-8 p-6 sm:p-8 lg:grid-cols-[1.1fr_0.9fr]" id="panel-artista">
+                    <div>
+                        <p class="text-xs font-bold uppercase tracking-[0.18em] text-brand">Artista</p>
+                        <h3 class="mt-2 font-display text-2xl font-extrabold text-white sm:text-3xl">Cockpit de palco limpo</h3>
+                        <p class="mt-3 leading-relaxed text-zinc-300">Do ensaio à última música: repertório, setlist e liquidação no mesmo fluxo.</p>
+                        <ul class="mt-5 space-y-3 text-zinc-300">
+                            <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand"></span><span><strong class="text-white">Cifras 100% offline</strong> — o show não depende de Wi‑Fi no palco.</span></li>
+                            <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand"></span><span><strong class="text-white">Gestão de setlist</strong> — fila VIP, votação e ordem da noite sob controle.</span></li>
+                            <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand"></span><span><strong class="text-white">Comissionamento flexível</strong> — Pix no Brasil; P2P nos EUA.</span></li>
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-[#12121a] p-5" aria-hidden="true">
+                        <div class="mb-4 flex items-center justify-between">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-zinc-500">App do artista</span>
+                            <span class="rounded-full bg-brand/15 px-2.5 py-1 text-[0.65rem] font-bold text-orange-300">Offline OK</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="rounded-xl border border-white/8 bg-white/[0.03] p-3">
+                                <div class="text-xs text-zinc-500">Agora tocando</div>
+                                <div class="mt-1 font-semibold text-white">Garota de Ipanema · Tom −1</div>
+                            </div>
+                            <div class="rounded-xl border border-brand/30 bg-brand/10 p-3">
+                                <div class="text-xs text-orange-200/80">Próximo VIP</div>
+                                <div class="mt-1 font-semibold text-white">Eu Te Devoro · R$ 50</div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="rounded-xl border border-white/8 p-3 text-center">
+                                    <div class="text-[0.65rem] uppercase text-zinc-500">Setlist</div>
+                                    <div class="mt-1 font-display text-lg font-bold text-white">24</div>
+                                </div>
+                                <div class="rounded-xl border border-white/8 p-3 text-center">
+                                    <div class="text-[0.65rem] uppercase text-zinc-500">Líquido</div>
+                                    <div class="mt-1 font-display text-lg font-bold text-brand">89%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
-                <article class="panel-view" id="panel-aovivo">
-                    <h3 class="text-2xl font-extrabold text-white">Painel ao Vivo</h3>
-                    <p class="mt-3 leading-relaxed text-zinc-300">O cockpit da noite: fila, cronômetro e placar enquanto o show acontece.</p>
-                    <ul class="mt-4 list-disc space-y-2 pl-5 text-zinc-300">
-                        <li>Aceitar, tocar ou chamar ao palco só depois do Pix confirmado.</li>
-                        <li>Placar da noite com o líquido de 89% já separado.</li>
-                        <li>Top 3 da votação no intervalo para montar o próximo bloco.</li>
-                    </ul>
+
+                <article class="pillar-panel gap-8 p-6 sm:p-8 lg:grid-cols-[1.1fr_0.9fr]" id="panel-bar">
+                    <div>
+                        <p class="text-xs font-bold uppercase tracking-[0.18em] text-brand">Bar / Casa Noturna</p>
+                        <h3 class="mt-2 font-display text-2xl font-extrabold text-white sm:text-3xl">Presença digital que vende a noite</h3>
+                        <p class="mt-3 leading-relaxed text-zinc-300">O estabelecimento entra no mapa, no perfil web e nas mesas — sem fricção operacional.</p>
+                        <ul class="mt-5 space-y-3 text-zinc-300">
+                            <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand"></span><span><strong class="text-white">Perfil Web Automático</strong> — página pronta para a casa e a programação.</span></li>
+                            <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand"></span><span><strong class="text-white">Destaque com logo no Mapa da Cidade</strong> — quem procura show te encontra.</span></li>
+                            <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand"></span><span><strong class="text-white">Totem Web nas mesas</strong> — pedido e gorjeta sem instalar app.</span></li>
+                        </ul>
+                        <p class="mt-6 rounded-2xl border border-gold/30 bg-gold/10 px-4 py-3 text-sm text-gold">
+                            Case de Sucesso: The Duck Pub
+                        </p>
+                        <a href="https://app.sinthonize.com.br/para-bares" class="btn-primary mt-5 inline-flex min-h-11 items-center rounded-2xl px-5 py-3 text-sm font-extrabold">
+                            Conhecer plano para bares
+                        </a>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-[#12121a] p-5" aria-hidden="true">
+                        <div class="mb-4 text-xs font-semibold uppercase tracking-wider text-zinc-500">Painel B2B</div>
+                        <div class="rounded-xl border border-white/8 bg-gradient-to-br from-brand/20 to-transparent p-4">
+                            <div class="font-display text-lg font-bold text-white">The Duck Pub</div>
+                            <div class="mt-1 text-sm text-zinc-300">Logo no mapa · Totem ativo · 3 shows na semana</div>
+                        </div>
+                        <div class="mt-3 grid gap-2">
+                            <div class="flex items-center justify-between rounded-xl border border-white/8 px-3 py-2.5 text-sm">
+                                <span class="text-zinc-300">Perfil Web</span>
+                                <span class="font-semibold text-emerald-400">Publicado</span>
+                            </div>
+                            <div class="flex items-center justify-between rounded-xl border border-white/8 px-3 py-2.5 text-sm">
+                                <span class="text-zinc-300">Totem nas mesas</span>
+                                <span class="font-semibold text-brand">Online</span>
+                            </div>
+                            <div class="flex items-center justify-between rounded-xl border border-white/8 px-3 py-2.5 text-sm">
+                                <span class="text-zinc-300">Destaque no mapa</span>
+                                <span class="font-semibold text-gold">Ativo</span>
+                            </div>
+                        </div>
+                    </div>
                 </article>
-                <article class="panel-view" id="panel-carteira">
-                    <h3 class="text-2xl font-extrabold text-white">Conexão Carteira</h3>
-                    <p class="mt-3 leading-relaxed text-zinc-300">Mercado Pago Connect: o Pix liquida na conta do músico, sem a plataforma segurar o valor.</p>
-                    <ul class="mt-4 list-disc space-y-2 pl-5 text-zinc-300">
-                        <li>Vínculo por OAuth. Sem carteira conectada, o VIP não abre.</li>
-                        <li>89% direto para o músico na hora; a taxa da plataforma sai no split.</li>
-                        <li>Couvert, VIP e karaokê entram no mesmo extrato.</li>
-                    </ul>
-                </article>
-                <article class="panel-view" id="panel-mapa">
-                    <h3 class="text-2xl font-extrabold text-white">Mapa de Shows</h3>
-                    <p class="mt-3 leading-relaxed text-zinc-300">GPS e raios de busca para achar quem está tocando agora e como chegar.</p>
-                    <ul class="mt-4 list-disc space-y-2 pl-5 text-zinc-300">
-                        <li>Shows ao vivo e próximos, filtrados por distância.</li>
-                        <li>Trajeto abre no Google Maps a partir do endereço do bar.</li>
-                    </ul>
-                </article>
-                <article class="panel-view" id="panel-vip">
-                    <h3 class="text-2xl font-extrabold text-white">Pedido VIP</h3>
-                    <p class="mt-3 leading-relaxed text-zinc-300">O fã escolhe a música, paga no Pix e acompanha até a fila do palco.</p>
-                    <ul class="mt-4 list-disc space-y-2 pl-5 text-zinc-300">
-                        <li>QR Code e copia-e-cola.</li>
-                        <li>O pedido só entra na fila depois da confirmação.</li>
-                        <li>No Tótem, a mesma fila funciona sem instalar o app.</li>
-                    </ul>
-                </article>
-                <article class="panel-view" id="panel-votacao">
-                    <h3 class="text-2xl font-extrabold text-white">Votação de Músicas</h3>
-                    <p class="mt-3 leading-relaxed text-zinc-300">No intervalo, o público vota de graça e o músico vê o Top 3 do próximo bloco.</p>
-                    <ul class="mt-4 list-disc space-y-2 pl-5 text-zinc-300">
-                        <li>Opções saem do repertório, fora do que já foi tocado.</li>
-                        <li>Um voto por bloco, como no app.</li>
-                    </ul>
+
+                <article class="pillar-panel gap-8 p-6 sm:p-8 lg:grid-cols-[1.1fr_0.9fr]" id="panel-plateia">
+                    <div>
+                        <p class="text-xs font-bold uppercase tracking-[0.18em] text-brand">Plateia</p>
+                        <h3 class="mt-2 font-display text-2xl font-extrabold text-white sm:text-3xl">Peça música. Envie gorjeta. Sem app.</h3>
+                        <p class="mt-3 leading-relaxed text-zinc-300">A plateia aponta a câmera, escolhe a música e paga — o palco responde em tempo real.</p>
+                        <ul class="mt-5 space-y-3 text-zinc-300">
+                            <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand"></span><span><strong class="text-white">Scan e peça</strong> — QR / câmera abre o show na hora.</span></li>
+                            <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand"></span><span><strong class="text-white">Gorjeta e VIP</strong> — apoio instantâneo sem fricção.</span></li>
+                            <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand"></span><span><strong class="text-white">Zero download obrigatório</strong> — funciona no navegador, na mesa.</span></li>
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-[#12121a] p-5" aria-hidden="true">
+                        <div class="mx-auto max-w-[220px] rounded-[1.4rem] border border-white/15 bg-[#09090f] p-3">
+                            <div class="rounded-xl border border-dashed border-brand/40 bg-brand/5 p-6 text-center">
+                                <div class="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-xl border border-brand/40 text-brand">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><rect width="8" height="8" x="8" y="8" rx="1"/></svg>
+                                </div>
+                                <p class="text-sm font-semibold text-white">Aponte a câmera</p>
+                                <p class="mt-1 text-xs text-zinc-400">Pedido + gorjeta no navegador</p>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </div>
         </section>
 
+        <!-- GLOBAL REACH -->
+        <section id="global" class="mx-auto max-w-6xl scroll-mt-24 px-5 pb-16">
+            <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#12121a] px-6 py-10 sm:px-10 sm:py-14">
+                <div class="absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-brand to-transparent"></div>
+                <div class="mx-auto max-w-3xl text-center">
+                    <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-orange-300">Global Reach</p>
+                    <h2 class="font-display text-3xl font-extrabold text-white sm:text-4xl">Operação nativa no Brasil e nos EUA</h2>
+                    <p class="mt-4 text-base leading-relaxed text-zinc-300 sm:text-lg">
+                        Operação Nativa no Brasil (Pix via Mercado Pago) e nos Estados Unidos (Integração direta com Venmo, Cash App e Zelle).
+                    </p>
+                </div>
+                <div class="mt-10 grid gap-4 sm:grid-cols-2">
+                    <article class="rounded-3xl border border-brand/25 bg-brand/5 p-6 sm:p-8">
+                        <span class="icon-wrap" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </span>
+                        <h3 class="mt-4 text-xl font-bold text-white">Brasil</h3>
+                        <p class="mt-2 leading-relaxed text-zinc-300">Pix via Mercado Pago — liquidação direta no fluxo do show.</p>
+                    </article>
+                    <article class="rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8">
+                        <span class="icon-wrap" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </span>
+                        <h3 class="mt-4 text-xl font-bold text-white">Estados Unidos</h3>
+                        <p class="mt-2 leading-relaxed text-zinc-300">Integração direta com Venmo, Cash App e Zelle — P2P no bolso do artista.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUTO / VÍDEO -->
         <section id="como-funciona" class="mx-auto max-w-6xl scroll-mt-24 px-5 pb-16">
             <div class="mb-6 max-w-2xl">
-                <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">Como funciona</p>
-                <h2 class="mt-3 text-3xl font-extrabold text-white sm:text-4xl">Veja o Sinthonize na prática</h2>
-                <p class="mt-3 text-base leading-relaxed text-zinc-300">Músicos e fãs: este tour mostra o repertório, o mapa, o pedido ao vivo e a carteira. Assista antes de baixar e veja a noite inteira dentro do app.</p>
+                <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">Produto</p>
+                <h2 class="mt-3 font-display text-3xl font-extrabold text-white sm:text-4xl">Veja o Sinthonize na prática</h2>
+                <p class="mt-3 text-base leading-relaxed text-zinc-300">Repertório, painel ao vivo e monetização — o sistema operacional da noite, do ensaio ao fechamento.</p>
             </div>
             <div class="video-frame">
                 <iframe
                     src="https://www.youtube.com/embed/I93dfGjhkV8"
-                    title="Sinthonize App - Funcionalidades para os Músicos"
+                    title="Sinthonize — funcionalidades para músicos"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen>
                 </iframe>
             </div>
         </section>
 
-        <section id="vip" class="mx-auto max-w-6xl px-5 pb-16">
-            <div class="gold-border relative overflow-hidden rounded-[2rem] bg-[#171717] px-6 py-10 sm:px-10 sm:py-14">
-                <div class="absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
-                <div class="mx-auto max-w-3xl text-center">
-                    <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-gold">Destaque principal</p>
-                    <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Pedidos VIP e gorjetas via Pix</h2>
-                    <p class="mt-4 text-base leading-relaxed text-zinc-300 sm:text-lg">
-                        No meio do show, o celular vira o seu lugar na fila. O fã pede. O Pix chega. O palco responde.
-                    </p>
-                </div>
-                <div class="mt-10 grid gap-5 md:grid-cols-2">
-                    <article class="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card sm:p-8">
-                        <span class="icon-wrap">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-                        </span>
-                        <h3 class="mt-5 text-xl font-bold text-white">O fã escolhe e apoia</h3>
-                        <p class="mt-3 leading-relaxed text-zinc-300">
-                            Escolha músicas do repertório do artista pelo celular e transforme o pedido em apoio real com Pix instantâneo. Sua música favorita sobe para o palco.
-                        </p>
-                    </article>
-                    <article class="rounded-3xl border border-brand/25 bg-brand/5 p-6 shadow-card sm:p-8">
-                        <span class="icon-wrap">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                        </span>
-                        <h3 class="mt-5 text-xl font-bold text-white">O músico recebe na hora</h3>
-                        <p class="mt-3 leading-relaxed text-zinc-300">
-                            O valor cai direto no palco. A fila de pedidos fica organizada e priorizada por valor — quem apoia mais, toca primeiro, sem bagunça e sem papel.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="shows" class="mx-auto max-w-6xl px-5 pb-16">
-            <div class="mb-8 max-w-2xl">
-                <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">Geolocalização e notificações</p>
-                <h2 class="mt-3 text-3xl font-extrabold text-white sm:text-4xl">Nunca mais perca um show.</h2>
-            </div>
-            <div class="grid gap-6 lg:grid-cols-2">
-                <article class="rounded-3xl border border-white/10 bg-card p-7 shadow-card sm:p-9">
-                    <span class="icon-wrap">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                    </span>
-                    <h3 class="mt-5 text-2xl font-extrabold text-white">Onde tem show hoje?</h3>
-                    <p class="mt-3 leading-relaxed text-zinc-300">
-                        Encontre apresentações ao vivo perto de você pelo GPS e pelo mapa. A cena local deixa de ser segredo: você abre o app e já sabe onde a música está acontecendo agora.
-                    </p>
-                </article>
-                <article class="rounded-3xl border border-white/10 bg-card p-7 shadow-card sm:p-9">
-                    <span class="icon-wrap">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
-                    </span>
-                    <h3 class="mt-5 text-2xl font-extrabold text-white">Siga seus artistas favoritos</h3>
-                    <p class="mt-3 leading-relaxed text-zinc-300">
-                        Receba notificações automáticas no celular sempre que o seu músico favorito for tocar. Sem folhear cartaz, sem perder a data: o aviso chega na hora certa.
-                    </p>
-                </article>
-            </div>
-        </section>
-
-        <section id="crachas" class="mx-auto max-w-6xl px-5 pb-16">
-            <div class="rounded-[2rem] border border-white/10 bg-[#171717] px-6 py-10 shadow-card sm:px-10 sm:py-14">
-                <div class="mx-auto max-w-3xl text-center">
-                    <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-orange-300">Gamificação</p>
-                    <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Crachás de Super Fã</h2>
-                    <p class="mt-4 text-base leading-relaxed text-zinc-300 sm:text-lg">
-                        Quanto mais você frequenta os shows e apoia o artista, mais alto fica o seu nível de fã no app. Colecione patentes, mostre o crachá e vire parte da história de quem você ama ouvir.
-                    </p>
-                </div>
-                <div class="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
-                    <article class="rounded-3xl border border-white/10 bg-white/[0.03] p-5 text-center">
-                        <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-zinc-500/40 bg-zinc-700/40 text-2xl" aria-hidden="true">♪</span>
-                        <h3 class="mt-4 font-extrabold text-white">Plateia</h3>
-                        <p class="mt-1 text-sm text-zinc-400">Primeiros passos no palco digital</p>
-                    </article>
-                    <article class="rounded-3xl border border-white/10 bg-white/[0.03] p-5 text-center">
-                        <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-orange-400/30 bg-brand/15 text-2xl text-orange-300" aria-hidden="true">★</span>
-                        <h3 class="mt-4 font-extrabold text-white">Fã Assíduo</h3>
-                        <p class="mt-1 text-sm text-zinc-400">Presença marcada nos shows</p>
-                    </article>
-                    <article class="rounded-3xl border border-brand/30 bg-brand/10 p-5 text-center">
-                        <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-brand/50 bg-brand/20 text-2xl text-brand" aria-hidden="true">♛</span>
-                        <h3 class="mt-4 font-extrabold text-white">Super Fã</h3>
-                        <p class="mt-1 text-sm text-zinc-300">Pedidos, apoio e crachá brilhando</p>
-                    </article>
-                    <article class="rounded-3xl border border-gold/35 bg-gold/10 p-5 text-center">
-                        <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-gold/50 bg-gold/20 text-2xl text-gold" aria-hidden="true">✦</span>
-                        <h3 class="mt-4 font-extrabold text-white">Lenda do Palco</h3>
-                        <p class="mt-1 text-sm text-zinc-300">O nível máximo de quem vive o show</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="musicos" class="mx-auto max-w-6xl px-5 pb-16">
-            <article class="glass relative overflow-hidden rounded-[2rem] p-7 sm:p-12">
-                <div class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand/15 blur-3xl"></div>
-                <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">O lado do músico</p>
-                <h2 class="mt-3 max-w-2xl text-3xl font-extrabold text-white sm:text-4xl">O palco profissional, na palma da mão.</h2>
-                <p class="mt-4 max-w-2xl text-base leading-relaxed text-zinc-300 sm:text-lg">
-                    Feito para quem sobe no palco de verdade: menos improviso, mais carreira — e dinheiro que chega enquanto a música toca.
+        <!-- CTA FINAL -->
+        <section class="mx-auto max-w-6xl px-5 pb-20">
+            <div class="rounded-[2rem] border border-white/10 bg-gradient-to-br from-brand/20 via-[#12121a] to-[#0B0B10] px-6 py-12 text-center sm:px-10">
+                <h2 class="font-display text-3xl font-extrabold text-white sm:text-4xl">Pronto para operar a noite inteira?</h2>
+                <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-zinc-300">
+                    Baixe o app ou leve o Sinthonize para o seu bar — infraestrutura que já fatura no palco e nas mesas.
                 </p>
-                <ul class="mt-8 grid gap-4 sm:grid-cols-2">
-                    <li class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                        <h3 class="font-bold text-white">Repertório na palma da mão</h3>
-                        <p class="mt-2 text-sm leading-relaxed text-zinc-300">Seu setlist digital, organizado e pronto para o fã pedir no celular.</p>
-                    </li>
-                    <li class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                        <h3 class="font-bold text-white">Adeus aos guardanapos</h3>
-                        <p class="mt-2 text-sm leading-relaxed text-zinc-300">Chega de pedidos rabiscados em papel. A fila chega limpa, no app, em tempo real.</p>
-                    </li>
-                    <li class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                        <h3 class="font-bold text-white">Agenda que se divulga sozinha</h3>
-                        <p class="mt-2 text-sm leading-relaxed text-zinc-300">Cadastre o show e o Sinthonize avisa quem te segue — automaticamente.</p>
-                    </li>
-                    <li class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                        <h3 class="font-bold text-white">Monetização real em cada apresentação</h3>
-                        <p class="mt-2 text-sm leading-relaxed text-zinc-300">Gorjetas via Pix e pedidos VIP viram receita no palco, não só aplauso no fim.</p>
-                    </li>
-                </ul>
-            </article>
-        </section>
-
-        <section id="tickets" class="mx-auto max-w-6xl px-5 pb-20">
-            <article class="relative overflow-hidden rounded-[2rem] border border-dashed border-white/20 bg-[#1a1a1a] px-6 py-10 text-center shadow-card sm:px-10">
-                <span class="inline-flex items-center rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-gold">
-                    Em produção · Em breve
-                </span>
-                <h2 class="mt-5 text-3xl font-extrabold text-white">Sinthonize Tickets</h2>
-                <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-zinc-300 sm:text-lg">
-                    Em breve, produtores e casas de show poderão gerenciar e vender ingressos integrados a todo esse ecossistema: o mesmo público que pede música e segue o artista também encontra o evento e entra pela porta.
-                </p>
-                <a href="tickets.html" class="mt-7 inline-flex rounded-2xl border border-white/14 bg-white/[0.04] px-7 py-4 font-semibold text-white transition hover:bg-white/[0.08]">
-                    Ver o teaser do Tickets
-                </a>
-            </article>
+                <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+                    <a href="https://apps.apple.com/br/app/sinthonize/id6830309123" target="_blank" rel="noopener noreferrer" class="inline-flex" aria-label="Download on the App Store">
+                        <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" style="height: 40px; width: auto;" />
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=br.com.sinthonize.app" target="_blank" rel="noopener noreferrer" class="inline-flex" aria-label="Disponível no Google Play">
+                        <img alt="Disponível no Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" style="height: 60px; width: auto;" />
+                    </a>
+                    <a href="https://app.sinthonize.com.br/para-bares" class="btn-ghost inline-flex min-h-11 items-center rounded-2xl px-5 py-3 text-sm font-extrabold">
+                        Para Bares e Casas Noturnas
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="border-t border-white/5 px-5 py-10">
         <div class="mx-auto flex max-w-6xl flex-col items-center gap-5 text-center text-sm text-zinc-500">
+            <a href="#topo" class="brand-wordmark text-lg text-white">Sinthonize</a>
             <div class="flex flex-wrap items-center justify-center gap-3">
                 <a href="https://apps.apple.com/br/app/sinthonize/id6830309123" target="_blank" rel="noopener noreferrer" class="inline-flex" aria-label="Download on the App Store">
                     <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" style="height: 40px; width: auto;" />
                 </a>
-                <a href="https://play.google.com/store/apps/details?id=br.com.sinthonize.app" target="_blank" rel="noopener noreferrer" class="google-play-btn inline-flex">
+                <a href="https://play.google.com/store/apps/details?id=br.com.sinthonize.app" target="_blank" rel="noopener noreferrer" class="inline-flex" aria-label="Disponível no Google Play">
                     <img alt="Disponível no Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" style="height: 60px; width: auto;" />
                 </a>
             </div>
             <p>
                 © <span id="currentYear"></span> Sinthonize. Todos os direitos reservados.
                 <span class="mx-2 text-zinc-700">|</span>
-                <a href="tickets.html" class="text-zinc-300 hover:text-white">Tickets</a>
+                <a href="https://app.sinthonize.com.br/privacidade" class="text-brand hover:text-orange-300">Política de Privacidade</a>
                 <span class="mx-2 text-zinc-700">|</span>
-                <a href="politica-de-privacidade.html" class="text-brand hover:text-orange-300">Política de Privacidade</a>
+                <a href="https://app.sinthonize.com.br/termos-de-uso" class="text-brand hover:text-orange-300">Termos de Uso</a>
             </p>
         </div>
     </footer>
@@ -393,39 +359,20 @@
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        function paintTab(button, on) {
-            button.classList.toggle('border-brand', on);
-            button.classList.toggle('bg-brand/20', on);
-            button.classList.toggle('text-white', on);
-            button.classList.toggle('border-white/10', !on);
-            button.classList.toggle('bg-card', !on);
-            button.classList.toggle('text-zinc-300', !on);
-            button.setAttribute('aria-selected', on ? 'true' : 'false');
-        }
-
-        function showPanel(panelId) {
-            document.querySelectorAll('.panel-view').forEach(function (view) {
-                view.classList.toggle('active', view.id === 'panel-' + panelId);
+        function showPillar(pillarId) {
+            document.querySelectorAll('.pillar-btn').forEach(function (button) {
+                var on = button.dataset.pillar === pillarId;
+                button.setAttribute('aria-selected', on ? 'true' : 'false');
             });
-            document.querySelectorAll('.feature-tab').forEach(function (tab) {
-                paintTab(tab, tab.dataset.panel === panelId);
+            document.querySelectorAll('.pillar-panel').forEach(function (panel) {
+                panel.classList.toggle('active', panel.id === 'panel-' + pillarId);
             });
         }
 
-        function showAudience(audience) {
-            document.querySelectorAll('.audience-btn').forEach(function (button) {
-                paintTab(button, button.dataset.audience === audience);
+        document.querySelectorAll('.pillar-btn').forEach(function (button) {
+            button.addEventListener('click', function () {
+                showPillar(button.dataset.pillar);
             });
-            document.getElementById('subtabs-musico').hidden = audience !== 'musico';
-            document.getElementById('subtabs-fa').hidden = audience !== 'fa';
-            showPanel(audience === 'musico' ? 'repertorio' : 'mapa');
-        }
-
-        document.querySelectorAll('.audience-btn').forEach(function (button) {
-            button.addEventListener('click', function () { showAudience(button.dataset.audience); });
-        });
-        document.querySelectorAll('.feature-tab').forEach(function (tab) {
-            tab.addEventListener('click', function () { showPanel(tab.dataset.panel); });
         });
     </script>
 </body>
